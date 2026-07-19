@@ -13,7 +13,6 @@ def create_app():
         height=720,
         min_width=800,
         min_height=600,
-        large_icon="",
     )
 
     # ── Main Window ─────────────────────────────────────────────────────
@@ -22,6 +21,10 @@ def create_app():
         dpg.add_text("Phase 1: Moo UI Shell")
         dpg.add_separator()
         dpg.add_text("Theme applied successfully.")
+        dpg.add_button(label="Accent Button")
+        dpg.add_slider_float(label="Slider", default_value=0.5)
+        dpg.add_checkbox(label="Checkbox")
+        dpg.add_input_text(label="Input")
 
     dpg.set_primary_window("__main_window__", True)
     dpg.setup_dearpygui()
